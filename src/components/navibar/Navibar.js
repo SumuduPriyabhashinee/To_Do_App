@@ -6,21 +6,18 @@ import logo from "../../assests/logo.png"
 import './Navibar.css';
 
 const Navibar = () => {
-  const clickRegister = (event) => {
-    window.location.href = `/users/register`;
+  const clickHome = (event) => {
+    window.location.href = `/`;
 }
 
-const clickAdmin = (event) => {
-    window.location.href = `/admin`;
+const clickList = (event) => {
+    window.location.href = `/todolist`;
 }
 
-const clickAbout = (event) => {
-  window.location.href = `/about`;
+const clickAddnew = (event) => {
+  window.location.href = `/addtask`;
 }
 
-const clickNews = (event) => {
-    window.location.href = `/news`;
-}
   return (
     <Navbar bg="dark" variant="dark">
       <div class="col-2">
@@ -32,10 +29,9 @@ const clickNews = (event) => {
         <div class="col-1">
         </div>
         <div class="col-6">
-    <button type="button" class="btn btn-outline-warning " onClick={clickRegister}>Home</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-outline-warning " onClick={clickNews}>To Do List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-outline-warning "onClick={clickAbout}>Add New</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-outline-warning "onClick={clickAdmin}>Admin</button>
+    <button type="button" class="btn btn-outline-warning " onClick={clickHome}>Home</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="btn btn-outline-warning " onClick={clickList}>To Do List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="btn btn-outline-warning "onClick={clickAddnew}>Add New</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
     </Navbar>
   );
