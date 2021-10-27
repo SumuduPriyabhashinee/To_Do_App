@@ -1,0 +1,13 @@
+.ContainerAddTask {
+    width: 80%;
+    height: auto;
+    padding: 60px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: -1px 4px 15px -2px #000000;
+    box-shadow: 0px 4px 10px -2px #000000;
+    text-align: left;
+  }
