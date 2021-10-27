@@ -31,7 +31,7 @@ const clickAddnew = (event) => {
         <div class="col-6">
     <button type="button" class="btn btn-outline-warning " onClick={clickHome}>Home</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button type="button" class="btn btn-outline-warning " onClick={clickList}>To Do List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-outline-warning "onClick={clickAddnew}>Add New</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="btn btn-outline-warning "onClick={clickAddnew}>Add New Task</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
     </Navbar>
   );
