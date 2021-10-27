@@ -1,6 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Navbar} from 'react-bootstrap';
 import logo from "../../assests/logo.png"
 
 import './Navibar.css';

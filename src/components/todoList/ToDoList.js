@@ -3,11 +3,10 @@ import { Container, Form, Button } from "react-bootstrap";
 import "./ToDoList.css"
 import { ToDoAppService } from '../../services/todoapp.service';
 import axios from 'axios';
-import {parse, stringify} from 'flatted/esm';
 import Swal from 'sweetalert2';
 import CONSTANTS from '../../services/constants';
 
-const UserList = () => {
+const ToDoList = () => {
 
     const [ToDoListstate, setToDoListState] = useState();
 
@@ -183,29 +182,29 @@ const UserList = () => {
         renderingToDoList = ToDoListstate.map((task) => {
             return (
                 <div className="Container" key={task.id}>
-                    <h2>{taskState.title !== null && isEdit == task.id? taskState.title:task.title}</h2>
-                    {isEdit == task.id ?
+                    <h2>{taskState.title !== null && isEdit === task.id? taskState.title:task.title}</h2>
+                    {isEdit === task.id ?
                         <Form.Control type="text" defaultValue={taskState.title !== null ? taskState.title : JSON.stringify(task.title).replace(/"/g, "")} onChange={handleTitleChange} />
                         : ""}
                     <hr /><br />
-                    {isViewMore == task.id ? <div><p>
-                        {isEdit == task.id ?
+                    {isViewMore === task.id ? <div><p>
+                        {isEdit === task.id ?
                             <Form.Control as="textarea" rows={3} defaultValue={taskState.description !== null ? taskState.description : JSON.stringify(task.description).replace(/"/g, "")} onChange={handleDescriptionChange} />
                             : task.description}
                     </p></div> : ''}
-                    {isViewMore == task.id ? <div>
+                    {isViewMore === task.id ? <div>
 
-                        <Button variant="secondary" onClick={() => ViewLess()}> {isEdit == task.id ? "Cancel" : "View Less"}</Button>
+                        <Button variant="secondary" onClick={() => ViewLess()}> {isEdit === task.id ? "Cancel" : "View Less"}</Button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                        {isEdit == task.id ?
+                        {isEdit === task.id ?
                             <Button variant="secondary" onClick={() => saveTask(task)}>Save</Button> : ""}
 
-                        {isEdit == task.id ? "" :
+                        {isEdit === task.id ? "" :
                             <Button variant="secondary" onClick={() => editTask(task)}>Edit</Button>}
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                        {isEdit == task.id ? "" :
+                        {isEdit === task.id ? "" :
                             <Button variant="secondary" onClick={() => deleteTask(task)}>Delete</Button>}
 
                     </div> :
@@ -224,4 +223,4 @@ const UserList = () => {
     );
 }
 
-export default UserList;
+export default ToDoList;
