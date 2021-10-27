@@ -3,23 +3,17 @@ import Footer from '../footer/Footer'
 import { Form, Row } from 'react-bootstrap';
 import CONSTANTS from '../../services/constants';
 import './Home.css'
+import ListCount from '../listCount/ListCount';
 
-const Home = () => {
+const Home = (props) => {
+
 
     const [style, setstyle] = useState(CONSTANTS.WelcomeStyles)
+    const [ToDoListstate, setToDoListState] = useState();
+
+    console.log(JSON.stringify(props.match.params))
 
 
-    const clickRegister = (event) => {
-        window.location.href = `/users/register`;
-    }
-
-    const clickNotices = (event) => {
-        window.location.href = `/1`;
-    }
-
-    const clickNews = (event) => {
-        window.location.href = `/news`;
-    }
 
     return (
         <div>
@@ -31,25 +25,25 @@ const Home = () => {
                         <div class="col-8">
                             <br />
                             <br /><br />
-                            
-                            
-                            
+
+
+
                             <br />
                         </div>
                     </Row>
                     <Row>
 
-                        <div style={style.Txt1}>Welcome To Do App <br /> 	&#128515;</div>
+                        <div style={style.Txt1}>Welcome To Do App <br /> <h2> {props.count} </h2>	&#128515;</div>
                         <div style={style.Txt2}><br /> Let's Plan your day</div>
                         <br /><br />
-                            
-                            <br /><br />
-                            
-                            <br /><br /><br /><br />
-                            
-                            <br /><br />
-                            
-                            <br /><br />
+
+                        <br /><br />
+
+                        <br /><br /><br /><br />
+
+                        <br /><br />
+
+                        <br /><br />
                     </Row>
                 </div>
             </Form>

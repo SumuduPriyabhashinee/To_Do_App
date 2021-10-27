@@ -5,6 +5,8 @@ import { ToDoAppService } from '../../services/todoapp.service';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import CONSTANTS from '../../services/constants';
+import ListCount from '../listCount/ListCount';
+import Home from '../home/Home';
 
 const ToDoList = () => {
 
@@ -176,7 +178,6 @@ const ToDoList = () => {
         
     }
 
-
     let renderingToDoList;
     if (ToDoListstate) {
         renderingToDoList = ToDoListstate.map((task) => {
@@ -213,6 +214,9 @@ const ToDoList = () => {
                 </div>
             );
         });
+        const count="renderingToDoList.length"
+        console.log(count);
+        <Home message={count}/>
     }
 
 
