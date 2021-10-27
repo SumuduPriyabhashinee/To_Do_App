@@ -19,7 +19,7 @@ const Footer = () => {
                 <div class="col-8">
                     <div className="text">
 
-                        &copy; {new Date().getFullYear()} Copyright: TodoList
+                        &copy; {new Date().getFullYear()} Copyright: TodoApp
 
                     </div>
                 </div>
