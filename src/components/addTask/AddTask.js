@@ -80,26 +80,32 @@ const AddTask = () => {
                     timer: 1500
                 })
             });
-        } else 
-    addTask(task);
-    setTimeout(() =>  window.location.href = `/todolist`, 2000)   
-}
+        } else
+            addTask(task);
+        setTimeout(() => window.location.href = `/todolist`, 2000)
+    }
 
 
     return (
-        <Form className="ContainerAddTask">
-            <h2>Add a Task</h2><hr />
-            <Form.Group >
-                <Form.Label><h4>Title : </h4></Form.Label>
-                <Form.Control type="text" onChange={handleTitleChange} />
-            </Form.Group><br />
-            <Form.Group>
-                <Form.Label><h4>Description : </h4></Form.Label><br />
-                <Form.Control as="textarea" rows={3} onChange={handleDescriptionChange} />
-            </Form.Group><br />           
-            <Button
-                variant="secondary" onClick={saveTask}>Submit</Button>
-        </Form>
+        <div className="addtask">
+            <div style={CONSTANTS.AddTaskbackground}>
+                <br /><br />
+                <Form className="ContainerAddTask">
+                    <h2>Add a Task</h2><hr />
+                    <Form.Group >
+                        <Form.Label><h4>Title : </h4></Form.Label>
+                        <Form.Control type="text" onChange={handleTitleChange} />
+                    </Form.Group><br />
+                    <Form.Group>
+                        <Form.Label><h4>Description : </h4></Form.Label><br />
+                        <Form.Control as="textarea" rows={3} onChange={handleDescriptionChange} />
+                    </Form.Group><br />
+                    <Button
+                        variant="warning" onClick={saveTask}>Submit</Button>
+                </Form>
+                <br /><br /><br /><br />
+            </div>
+        </div>
     );
 }
 
