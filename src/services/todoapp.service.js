@@ -8,7 +8,7 @@ const gettingToDoList = new Subject();
 
 export const ToDoAppService = {
 
-    getAlltasks : () => {
+    getAlltasks: () => {
         axios.get(CONSTANTS.API + '/todo')
             .then(response => {
                 gettingToDoList.next(response.data)
@@ -23,7 +23,7 @@ export const ToDoAppService = {
 
     },
 
-    addTask :(task) => {
+    addTask: (task) => {
         axios.post(CONSTANTS.API + '/todo', task)
             .then(response => {
                 console.log(response.data);
@@ -38,8 +38,8 @@ export const ToDoAppService = {
 
     },
 
-    getTaskById : (id) => {
-        axios.get(CONSTANTS.API + '/todo/'+id)
+    getTaskById: (id) => {
+        axios.get(CONSTANTS.API + '/todo/' + id)
             .then(response => {
                 console.log(response.data.data);
             })
@@ -53,7 +53,7 @@ export const ToDoAppService = {
 
     },
 
-    
+
 
     getToDoList: () => gettingToDoList.asObservable()
 
