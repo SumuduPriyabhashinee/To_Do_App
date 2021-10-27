@@ -20,7 +20,8 @@ const ToDoList = () => {
         title: null,
         description: null
     })
-
+    
+    // const [taskcountState,taskcountSetState]=useState();
 
     useEffect(() => {
         ToDoAppService.getAlltasks();
@@ -29,6 +30,8 @@ const ToDoList = () => {
             .subscribe(tasks => {
                 console.log(tasks);
                 setToDoListState(tasks);
+                // taskcountSetState(tasks.length)
+                // console.log(tasks.length)
             });
     }, [])
 
@@ -217,9 +220,8 @@ const ToDoList = () => {
 
             );
         });
-        const count = "renderingToDoList.length"
-        console.log(count);
-        <Home message={count} />
+    //     console.log("rentaskcoun"+taskcountState);
+    //     <Home props={taskcountState} />
     }
 
 
