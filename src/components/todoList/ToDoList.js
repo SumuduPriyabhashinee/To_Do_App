@@ -21,7 +21,7 @@ const ToDoList = () => {
         description: null
     })
     
-    // const [taskcountState,taskcountSetState]=useState();
+    const [taskcountState,taskcountSetState]=useState();
 
     useEffect(() => {
         ToDoAppService.getAlltasks();
@@ -30,7 +30,7 @@ const ToDoList = () => {
             .subscribe(tasks => {
                 console.log(tasks);
                 setToDoListState(tasks);
-                // taskcountSetState(tasks.length)
+                taskcountSetState(tasks.length)
                 // console.log(tasks.length)
             });
     }, [])
@@ -230,6 +230,7 @@ const ToDoList = () => {
             <div style={CONSTANTS.Todolistbackground}>
                 <br /><br />
                 <h1>To Do List</h1>
+                <h4>{taskcountState} Tasks on your List</h4>
                 <Container>
                     {renderingToDoList}
                 </Container>

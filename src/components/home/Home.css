@@ -11,11 +11,15 @@
 
 .btn-xl {
   padding: 10px 22px;
-  font-size: 30px;
+  font-size: 40px;
   color: aliceblue;
-  border-radius: 10px;
+  border-radius: 50px;
   box-shadow: 1px 0px 12px 3px #000000;
   background-color:#9db803 ;
   /* border: 3px solid #022e41; */
-  width:10%;
+  width:50%;
+}
+
+.butn{
+  width: 60%;
 }
